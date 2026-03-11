@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Método Rainha do Pudim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --caramelo: #C68B59;
+            --caramelo-escuro: #8C5A2B;
+            --creme: #FDFBF7;
+            --creme-escuro: #F4E8D8;
+            --dourado: #D4AF37;
+            --texto: #4A3B2C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #222;
+            color: var(--texto);
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .slides-container {
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            text-align: center;
+            position: relative;
+            background-color: var(--creme);
+        }
+
+        .slide:nth-child(even) {
+            background-color: var(--creme-escuro);
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            color: var(--caramelo-escuro);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            max-width: 1000px;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: var(--caramelo);
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        h2.title {
+            font-size: 3.5rem;
+            color: var(--caramelo-escuro);
+            margin-bottom: 3rem;
+            border-bottom: 4px solid var(--dourado);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .content {
+            font-size: 1.8rem;
+            max-width: 900px;
+            line-height: 1.6;
+            text-align: left;
+            width: 100%;
+        }
+
+        .highlight {
+            color: var(--caramelo-escuro);
+            font-weight: 800;
+        }
+
+        .box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(198, 139, 89, 0.15);
+            margin: 1.5rem 0;
+            border-left: 6px solid var(--dourado);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box h3 {
+            color: var(--caramelo-escuro);
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .slide-numero {
+            position: absolute;
+            bottom: 30px;
+            font-size: 1.2rem;
+            color: #b09986;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        ul li::before {
+            content: '✨';
+            position: absolute;
+            left: -10px;
+            color: var(--dourado);
+        }
+
+        .icon-large {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        /* Instrução de navegação no primeiro slide */
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            animation: bounce 2s infinite;
+            color: var(--caramelo);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-15px);
+            }
+
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slides-container">
+
+        <!-- Slide 1: Capa -->
+        <div class="slide">
+            <div class="icon-large">🍮</div>
+            <h1>Método Rainha do Pudim</h1>
+            <p class="subtitle">Lucrando com Mini Pudins sem Forno.<br><br>Praticidade, baixo custo e alta lucratividade
+                para o seu negócio.</p>
+            <div class="scroll-hint">Role para baixo ↓</div>
+            <div class="slide-numero">01 / 08</div>
+        </div>
+
+        <!-- Slide 2: Introdução e Vantagens -->
+        <div class="slide">
+            <h2 class="title">Introdução e Vantagens</h2>
+            <div class="content">
+                <div class="box">
+                    <h3>O Conceito Inovador</h3>
+                    <p>Mini pudins deliciosos que <span class="highlight">não levam ovos</span> e <strong>não precisam
+                            de forno ou fogão</strong> para o preparo da massa.</p>
+                </div>
+                <div class="box" style="border-left-color: var(--caramelo);">
+                    <h3>Destaques do Método</h3>
+                    <ul>
+                        <li><strong>Economia Absoluta:</strong> Fim do gasto excessivo com gás ou energia elétrica.</li>
+                        <li><strong>Rapidez Extrema:</strong> Uma produção muito mais ágil que o banho-maria
+                            tradicional.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-numero">02 / 08</div>
+        </div>
+
+        <!-- Slide 3: Ingredientes -->
+        <div class="slide">
+            <h2 class="title">Receita: Calda e Massa</h2>
+            <div class="content grid-2">
+                <div class="box">
+                    <h3>🍯 Para a Calda</h3>
+                    <ul>
+                        <li>1 xícara de açúcar</li>
+                        <li>160ml de água</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>🥛 Para a Massa</h3>
+                    <ul>
+                        <li>350ml de leite</li>
+                        <li>1 lata/caixa de leite condensado</li>
+                        <li>1 caixinha de creme de leite</li>
+                        <li>5 colheres (sopa) de leite em pó</li>
+                        <li>1 envelope de gelatina sem sabor (hidratada)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-numero">03 / 08</div>
+        </div>
+
+        <!-- Slide 4: O Passo a Passo -->
+        <div class="slide">
+            <h2 class="title">O Passo a Passo</h2>
+            <div class="content">
+                <div class="box">
+                    <h3>A Calda</h3>
+                    <p>Prepare no fogo com a água e o açúcar até dissolver todos os torrões e obter um caramelo liso.
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>A Massa</h3>
+                    <p>Bata todos os ingredientes da massa no liquidificador por alguns minutos até homogeneizar bem.
+                    </p>
+                </div>
+                <div class="box" style="background-color: var(--dourado); color: white; border: none;">
+                    <h3 style="color: white;">👑 Segredo da Rainha</h3>
+                    <p>Adicione <strong>4 colheres da calda</strong> diretamente na massa enquanto bate para dar uma cor
+                        maravilhosa e um sabor ainda mais especial!</p>
+                </div>
+            </div>
+            <div class="slide-numero">04 / 08</div>
+        </div>
+
+        <!-- Slide 5: Montagem Profissional -->
+        <div class="slide">
+            <h2 class="title">Montagem Profissional</h2>
+            <div class="content">
+                <div class="box">
+                    <h3>Forminhas Ideais</h3>
+                    <p>Utilize forminhas plásticas (próprias para doce) com capacidade de <span
+                            class="highlight">140ml</span>.</p>
+                </div>
+                <div class="box">
+                    <h3>Dica de Ouro da Montagem</h3>
+                    <p>Despeje primeiro a calda e leve as forminhas à geladeira por <strong>5 minutos</strong> antes de
+                        colocar a massa.</p>
+                    <p style="margin-top: 10px; font-size: 1.4rem; color: #666;">Isso garante que as camadas não se
+                        misturem, deixando o visual perfeito!</p>
+                </div>
+            </div>
+            <div class="slide-numero">05 / 08</div>
+        </div>
+
+        <!-- Slide 6: Finalização e Conservação -->
+        <div class="slide">
+            <h2 class="title">Finalização e Conservação</h2>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>Tempo de Geladeira:</strong>
+                        <p>Deixe gelar por 4 a 5 horas para atingir a textura de seda.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Como Desenformar:</strong>
+                        <p>Pressione levemente a lateral com os dedos ou com uma faquinha sem ponta. O segredo é
+                            <em>deixar entrar ar lateralmente</em> para o pudim escorregar fácil.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Validade:</strong>
+                        <p>Até <span class="highlight">5 dias</span> bem refrigerado e fechado na embalagem.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="slide-numero">06 / 08</div>
+        </div>
+
+        <!-- Slide 7: Análise de Lucro -->
+        <div class="slide">
+            <h2 class="title">Análise de Lucro</h2>
+            <div class="content grid-2">
+                <div class="box" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">📦</div>
+                    <h3>Rendimento</h3>
+                    <p class="highlight" style="font-size: 2.5rem;">12 unidades</p>
+                    <p>por receita</p>
+                </div>
+                <div class="box" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">💰</div>
+                    <h3>Custo Unitário</h3>
+                    <p class="highlight" style="font-size: 2.5rem;">R$ 2,00</p>
+                    <p>aproximadamente</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="box" style="text-align: center; margin-top: 0;">
+                    <p style="font-size: 1.8rem;">🎯 <strong>Estratégia:</strong> Foco em renda extra rápida e <span
+                            class="highlight">alta margem de lucro</span>!</p>
+                </div>
+            </div>
+            <div class="slide-numero">07 / 08</div>
+        </div>
+
+        <!-- Slide 8: Conclusão -->
+        <div class="slide">
+            <div class="icon-large">🚀</div>
+            <h2 class="title" style="border: none; margin-bottom: 1rem;">Chegou a sua vez!</h2>
+            <p class="subtitle" style="font-size: 2.5rem; line-height: 1.4; color: var(--texto);">
+                O forno desligado é o seu maior aliado.<br>
+                <strong>Comece sua produção e suas vendas hoje mesmo!</strong>
+            </p>
+            <br><br>
+            <p style="color: var(--caramelo); font-weight: 600; font-size: 1.5rem;">A coroa de Rainha do Pudim está
+                pronta para você.</p>
+            <div class="slide-numero">08 / 08</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
